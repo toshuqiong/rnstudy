@@ -6,14 +6,15 @@ import {
     View,
     FlatList,
     Text,
-    StyleSheet
+    StyleSheet,
+    ScrollView
 } from 'react-native';
 
 export default class FlatListDemo extends Component {
     render () {
         return (
-            <View style={styles.container}>
-                <FlatList data={[
+            //<View style={styles.container}>
+                <FlatList horizontal={true} style={styles.container} data={[
                     {key: 'A'},
                     {key: 'B'},
                     {key: 'C'},
@@ -28,9 +29,15 @@ export default class FlatListDemo extends Component {
                     {key: 'L'},
                     {key: 'M'},
                     {key: 'N'},
-                    {key: 'O'},]} renderItem={({item}) => <Text style={styles.item}>{item.key}</Text>}>
+                    {key: 'O'},
+                    {key: 'P'},
+                    {key: 'Q'},
+                    {key: 'R'},
+                    {key: 'S'},
+                    {key: 'T'},
+                    ]} renderItem={({item}) => <Text style={styles.item}>{item.key}</Text>}>
                 </FlatList>
-            </View>
+            //</View>
 
         );
     }
@@ -39,7 +46,8 @@ export default class FlatListDemo extends Component {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        paddingTop: 10,
+        paddingTop: 40,
+        flexDirection: 'row',
     },
     item: {
         padding: 10,

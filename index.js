@@ -4,5 +4,7 @@ import FlexDemo from './Flex';
 import LayoutDemo from './Layout';
 import PizzaTranslator from './PizzaTranslatorDemo';
 import FlatListDemo from './FlatListDemo';
+import SectionListDemo from './SectionListDemo';
+import FetchDataDemo from './fetchDataDemo'
 
-AppRegistry.registerComponent('HelloWorld', () => FlatListDemo);
+AppRegistry.registerComponent('HelloWorld', () => FetchDataDemo);
